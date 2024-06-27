@@ -38,6 +38,4 @@ public class Steps {
                 .deleteBook()
                 .isEmptylist();
     }
-
-
 }

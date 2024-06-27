@@ -1,12 +1,11 @@
 package models;
 import lombok.Data;
-
 import java.util.ArrayList;
 
 @Data
 public class AddBookRequestBodyModel {
-    public String userId;
 
+    public String userId;
     private ArrayList<CollectionsOfBooks> collectionOfIsbns;
 
     public void setIsbn(String value) {
@@ -16,5 +15,4 @@ public class AddBookRequestBodyModel {
         isbnData.add(isbn);
         this.collectionOfIsbns = isbnData;
     }
-
 }
