@@ -12,7 +12,7 @@ public class DemoQATests extends TestBase{
     @DisplayName("Тест удаления книги из профиля")
     @Test
     @WithLogin
-    void RemovingAProductFromTheList(){
+    void removingAProductFromTheListTest(){
 
         Steps step = new Steps();
         step.addBookAPI();
