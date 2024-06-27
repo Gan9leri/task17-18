@@ -1,5 +1,5 @@
 package tests;
-import Authorization.Authorization;
+import authorization.Authorization;
 import data.TestData;
 import io.qameta.allure.Step;
 import models.AddBookRequestBodyModel;
@@ -23,7 +23,7 @@ public class Steps {
         bookData.setIsbn(data.isbn);
 
         given(RequestSpec)
-                .header("Authorization", "Bearer " + token)
+                .header("authorization", "Bearer " + token)
                 .body(bookData)
                 .when()
                 .post("/BookStore/v1/Books")

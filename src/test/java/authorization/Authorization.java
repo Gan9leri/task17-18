@@ -1,4 +1,4 @@
-package Authorization;
+package authorization;
 
 import com.codeborne.selenide.WebDriverRunner;
 import data.TestData;

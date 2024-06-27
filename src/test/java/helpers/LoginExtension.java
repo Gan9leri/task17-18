@@ -1,5 +1,5 @@
 package helpers;
-import Authorization.Authorization;
+import authorization.Authorization;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
