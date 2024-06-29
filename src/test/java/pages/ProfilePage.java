@@ -8,11 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class ProfilePage {
-    /*
-    *$("#delete-record-undefined").click();
-    $("#closeSmallModal-ok").click();
-    $("#closeSmallModal-ok").click();
-    $(".rt-noData").shouldHave(text("No rows found"));*/
+
     SelenideElement deleteButton = $("#delete-record-undefined"),
                     okButton = $("#closeSmallModal-ok"),
                     emptyList = $(".rt-noData");
@@ -31,7 +27,7 @@ public class ProfilePage {
     }
 
     @Step("Подтверждение удаления книги")
-    public ProfilePage isEmptylist(){
+    public ProfilePage checkThatListIsEmpty(){
         emptyList.shouldHave(text("No rows found"));
         return this;
     }

@@ -3,6 +3,6 @@ package models;
 import lombok.Data;
 
 @Data
-public class CollectionsOfBooks {
+public class IsbnValue {
     String isbn;
 }

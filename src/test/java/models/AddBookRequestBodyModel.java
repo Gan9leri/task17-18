@@ -6,12 +6,12 @@ import java.util.ArrayList;
 public class AddBookRequestBodyModel {
 
     public String userId;
-    private ArrayList<CollectionsOfBooks> collectionOfIsbns;
+    private ArrayList<IsbnValue> collectionOfIsbns;
 
     public void setIsbn(String value) {
-        CollectionsOfBooks isbn = new CollectionsOfBooks();
+        IsbnValue isbn = new IsbnValue();
         isbn.setIsbn(value);
-        ArrayList<CollectionsOfBooks> isbnData = new ArrayList<>();
+        ArrayList<IsbnValue> isbnData = new ArrayList<>();
         isbnData.add(isbn);
         this.collectionOfIsbns = isbnData;
     }

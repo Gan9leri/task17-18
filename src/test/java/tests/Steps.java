@@ -16,8 +16,8 @@ public class Steps {
     @Step("Добавление книг в профиль")
     public void addBookAPI(){
 
-        String userID = Authorization.extactValueFromCookies("userID");
-        String token = Authorization.extactValueFromCookies("token");
+        String userID = Authorization.extactValueFromCookieString("userID");
+        String token = Authorization.extactValueFromCookieString("token");
         AddBookRequestBodyModel bookData = new AddBookRequestBodyModel();
         bookData.userId = userID;
         bookData.setIsbn(data.isbn);
@@ -35,7 +35,15 @@ public class Steps {
     public void deleteBookUI(){
 
         profile.openPage()
-                .deleteBook()
-                .isEmptylist();
+                .deleteBook();
     }
+
+    @Step("Проверка, что книга удалена")
+    public void CheckThatBookHasBeenDeletedUI(){
+        profile.checkThatListIsEmpty();
+    }
+
+
+
+
 }

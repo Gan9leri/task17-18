@@ -17,6 +17,7 @@ public class DemoQATests extends TestBase{
         Steps step = new Steps();
         step.addBookAPI();
         step.deleteBookUI();
+        step.CheckThatBookHasBeenDeletedUI();
 
     }
 }

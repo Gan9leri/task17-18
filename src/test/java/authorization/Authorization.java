@@ -15,7 +15,7 @@ import static specs.DemoQASpecs.ResponseSpec200;
 public class Authorization {
 
     @Step("Получение данных для авторизации")
-    public static AuthResponseBodyModel getCookie() {
+    public static AuthResponseBodyModel getAuthResponse() {
         TestData acc = new TestData();
         AuthRequestBodyModel authData = new AuthRequestBodyModel();
         authData.setUserName(acc.login);
@@ -39,8 +39,8 @@ public class Authorization {
         open("");
     }
 
-    public static String extactValueFromCookies(String str) {
-        String cookieValue = String.valueOf(WebDriverRunner.getWebDriver().manage().getCookieNamed(str));
+    public static String extactValueFromCookieString(String value) {
+        String cookieValue = String.valueOf(WebDriverRunner.getWebDriver().manage().getCookieNamed(value));
         return cookieValue.substring(cookieValue.indexOf("=") + 1, cookieValue.indexOf(";"));
     }
 }
